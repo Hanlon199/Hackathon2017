@@ -7,16 +7,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
 
 
-/**
- * Handles all mouse input
- * 
- * @author Brandon Loehle 5/30/16
- *
- */
-
 public class mouseListener extends MouseAdapter {
 
-	private MainPanel game;
+	private MainPanel home;
 	//private Handler handler;
 	private String upgradeText;
 	private double width;
@@ -24,7 +17,7 @@ public class mouseListener extends MouseAdapter {
 
 	//this constructor not really necessary but I am leaving it just in case
 	public mouseListener(MainPanel game) {
-		this.game 			= game;
+		this.home = home;
 		//this.handler 		= handler;
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		width = (double) screenSize.getWidth();
@@ -34,6 +27,10 @@ public class mouseListener extends MouseAdapter {
 	public void mousePressed(MouseEvent e) {
 		int mx = e.getX();
 		int my = e.getY();
+		
+		if (mouseOver(mx, my, 250, 460, 350, 350)) {
+			System.exit(1);
+		}
 
 		
 	}
