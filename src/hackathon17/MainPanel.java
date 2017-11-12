@@ -13,7 +13,7 @@ public class MainPanel {
 	public MainPanel(){
 	}
 	public void render(Graphics g) {
-
+		
 			Font font = new Font("Amoebic", 1, 80);
 			Font font1 = new Font("Amoebic", 1, 70);
 
