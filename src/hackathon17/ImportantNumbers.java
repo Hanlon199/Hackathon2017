@@ -5,6 +5,9 @@ import java.awt.*;
 
 public class ImportantNumbers {
 
+	public ImportantNumbers() {
+		
+	}
 	public void render(Graphics g) {
 		
 		Font font = new Font("impact", 1, 33);

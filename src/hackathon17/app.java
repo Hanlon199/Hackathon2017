@@ -12,7 +12,6 @@ public class app extends Canvas {
 	private mouseListener mouseListener;
 	public STATE gameState = STATE.MENU;
 	JFrame mainScreen;
-
 	
 	public app() {
 		windowHeight = 1000;
