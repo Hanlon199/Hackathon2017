@@ -1,5 +1,6 @@
 package hackathon17;
 
+import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -9,8 +10,9 @@ import java.net.URL;
 
 
 public class MainPanel {
-	
 	public MainPanel(){
+
+		
 	}
 	public void render(Graphics g) {
 
@@ -44,5 +46,6 @@ public class MainPanel {
 
 			
 	}
+
 
 }
