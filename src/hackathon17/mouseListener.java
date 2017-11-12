@@ -3,7 +3,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
- javax.swing.JOptionPane;
+import javax.swing.JOptionPane;
 
 public class mouseListener extends MouseAdapter {
 
@@ -30,7 +30,7 @@ public class mouseListener extends MouseAdapter {
 	}
 
 	public void mouseReleased(MouseEvent e) {
-
+	
 	}
 
 	/**
