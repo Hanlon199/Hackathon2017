@@ -4,7 +4,6 @@ import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
-
 import hackathon17.app.STATE;
 
 
@@ -14,12 +13,13 @@ import hackathon17.app.STATE;
 
 public class mouseListener extends MouseAdapter {
 
-	private app game;
+	private MainPanel home;
+	private app app;
 	private String upgradeText;
 	private int width, height;
 
 	public mouseListener(app app) {
-		this.game = game;
+		this.app = app;
 		width = 350;
 		height = 350;
 	}
@@ -27,18 +27,17 @@ public class mouseListener extends MouseAdapter {
 	public void mousePressed(MouseEvent e) {
 		int mx = e.getX();
 		int my = e.getY();
-		if(game.gameState == STATE.MENU) {
+		if(app.gameState == STATE.MENU) {
 			if(mouseOver(mx, my, 250, 60, width, height)) {
-				game.gameState = STATE.REPORT;
+				app.gameState = STATE.REPORT;
 			} else if(mouseOver(mx, my, 650, 60, width, height)) {
-				game.gameState = STATE.NUMBERS;
+				app.gameState = STATE.NUMBERS;
 			} else if(mouseOver(mx, my, 650, 460, width, height)) {
-				game.gameState = STATE.LOCATION;
-			} else if(mouseOver(mx, my, 340, 650, width, height)) {
+				app.gameState = STATE.LOCATION;
+			} else if(mouseOver(mx, my, 250, 460, width, height)) {
 				System.exit(1);
 			} 
 		}
-
 	}
 
 	public void mouseReleased(MouseEvent e) {
