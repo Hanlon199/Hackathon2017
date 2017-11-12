@@ -9,14 +9,15 @@ import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import java.net.URL;
 
+import javax.swing.ImageIcon;
+
 
 public class MainPanel {
 	private Image img;
 	public MainPanel(){
 		img = null;
 		try {
-			URL imageURL = app.class.getResource("images/background.jpg");
-			img = Toolkit.getDefaultToolkit().getImage(imageURL);
+			img = new ImageIcon("images/background.jpg").getImage();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
