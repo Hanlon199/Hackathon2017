@@ -3,25 +3,19 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.JOptionPane;
-
 
 public class mouseListener extends MouseAdapter {
 
 	private MainPanel home;
+	private app game;
 	//private Handler handler;
 	private String upgradeText;
-	private double width;
-	private double height;
+
 
 	//this constructor not really necessary but I am leaving it just in case
-	public mouseListener(MainPanel game) {
-		this.home = home;
-		//this.handler 		= handler;
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		width = (double) screenSize.getWidth();
-		height = (double) screenSize.getHeight();
+	public mouseListener(app game) {
+		this.game 			= game;
 	}
 
 	public void mousePressed(MouseEvent e) {
@@ -36,7 +30,7 @@ public class mouseListener extends MouseAdapter {
 	}
 
 	public void mouseReleased(MouseEvent e) {
-
+	
 	}
 
 	/**
