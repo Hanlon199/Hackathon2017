@@ -11,6 +11,8 @@ public class app extends Canvas {
 	private int windowHeight, windowWidth;
 	private mouseListener mouseListener;
 	JFrame mainScreen;
+	public STATE gameState = STATE.MENU;
+	
 	public app() {
 		windowHeight = 1000;
     	windowWidth = 1280;		
@@ -23,12 +25,13 @@ public class app extends Canvas {
 		this.addMouseListener(mouseListener);
 	}
 	
+	public enum STATE {
+		MENU, NUMBERS, REPORT, LOCATION;
+	};
+	
     public static void main(String ad[])
     {
- 
-        app a=new app();
-       
-
+        app a=new app();  
     }
     
     public void paint (Graphics g)
