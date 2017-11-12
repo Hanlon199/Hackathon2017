@@ -5,6 +5,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
 
+import hackathon17.app.STATE;
+
 
 /**
  * Handles mouse input
@@ -13,26 +15,34 @@ import javax.swing.JOptionPane;
 public class mouseListener extends MouseAdapter {
 
 	private app game;
-	//private Handler handler;
 	private String upgradeText;
+	private int width, height;
 
-
-	//this constructor not really necessary but I am leaving it just in case
-	public mouseListener(app game) {
-		this.game 			= game;
-		//this.handler 		= handler;
+	public mouseListener(app app) {
+		this.game = game;
+		width = 350;
+		height = 350;
 	}
 
 	public void mousePressed(MouseEvent e) {
 		int mx = e.getX();
 		int my = e.getY();
-		System.out.println("hihihi");
+		if(game.gameState == STATE.MENU) {
+			if(mouseOver(mx, my, 250, 60, width, height)) {
+				game.gameState = STATE.REPORT;
+			} else if(mouseOver(mx, my, 650, 60, width, height)) {
+				game.gameState = STATE.NUMBERS;
+			} else if(mouseOver(mx, my, 650, 460, width, height)) {
+				game.gameState = STATE.LOCATION;
+			} else if(mouseOver(mx, my, 340, 650, width, height)) {
+				System.exit(1);
+			} 
+		}
 
-		
 	}
 
 	public void mouseReleased(MouseEvent e) {
-	
+
 	}
 
 	/**
