@@ -12,6 +12,7 @@ public class app extends Canvas {
 	private mouseListener mouseListener;
 	public STATE gameState = STATE.MENU;
 	JFrame mainScreen;
+	private ImportantNumbers numberScreen;
 	
 	public app() {
 		windowHeight = 1000;
@@ -23,6 +24,7 @@ public class app extends Canvas {
         mainScreen.setVisible(true);
 		mouseListener = new mouseListener(this);
 		this.addMouseListener(mouseListener);
+		numberScreen = new ImportantNumbers(this);
 	}
 	
 	public enum STATE {

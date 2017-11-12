@@ -2,13 +2,18 @@ package hackathon17;
 
 import java.awt.Font;
 import java.awt.*;
-
+import hackathon17.app.STATE;
 public class ImportantNumbers {
+	private app app;
 
-	public ImportantNumbers() {
+	public ImportantNumbers(app app) {
+		this.app = app;
 		
 	}
 	public void render(Graphics g) {
+		if(app.gameState == STATE.NUMBERS) {
+			
+		
 		
 		Font font = new Font("impact", 1, 33);
 		Font font1 = new Font("impact", 1, 50);
@@ -30,3 +35,5 @@ public class ImportantNumbers {
 		g.drawString("Back", 100, 150);
 	}
 }
+}
+
