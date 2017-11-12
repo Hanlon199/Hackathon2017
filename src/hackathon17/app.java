@@ -10,10 +10,7 @@ public class app extends Canvas {
 	private static MainPanel bet;
 	private int windowHeight, windowWidth;
 	JFrame mainScreen;
-<<<<<<< HEAD
-=======
 	public STATE gameState = STATE.MENU;
->>>>>>> 3dc67bd3552657845348115e59542b4a6543afa6
 	
 	public app() {
 		windowHeight = 1000;
