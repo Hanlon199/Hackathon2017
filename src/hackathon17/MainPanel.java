@@ -8,14 +8,17 @@ import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import java.net.URL;
 
+import hackathon17.app.STATE;
+
 
 public class MainPanel {
-	public MainPanel(){
+	private app app;
 
-		
+	public MainPanel(app app){
+		this.app = app;
 	}
 	public void render(Graphics g) {
-		
+		if(app.gameState == STATE.MENU) {
 			Font font = new Font("Amoebic", 1, 80);
 			Font font1 = new Font("Amoebic", 1, 70);
 
@@ -43,8 +46,8 @@ public class MainPanel {
 			g.setFont(font);
 			g.setColor(Color.orange);
 			g.drawString("Location", 665, 650);
+		}
 
-			
 	}
 
 

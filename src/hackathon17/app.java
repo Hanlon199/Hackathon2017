@@ -17,7 +17,7 @@ public class app extends Canvas {
 	public app() {
 		windowHeight = 1000;
     	windowWidth = 1280;		
-        bet = new MainPanel();
+        bet = new MainPanel(this);
         mainScreen = new JFrame();
         mainScreen.getContentPane().add(this, BorderLayout.CENTER);
         mainScreen.setSize(new Dimension(windowWidth,windowHeight));
