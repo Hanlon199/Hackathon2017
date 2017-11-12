@@ -10,6 +10,7 @@ public class app extends Canvas {
 	private static MainPanel bet;
 	private int windowHeight, windowWidth;
 	JFrame mainScreen;
+	
 	public app() {
 		windowHeight = 1000;
     	windowWidth = 1280;		
@@ -20,12 +21,13 @@ public class app extends Canvas {
         mainScreen.setVisible(true);
 	}
 	
+	public enum STATE {
+		MENU, NUMBERS, REPORT, LOCATION;
+	};
+	
     public static void main(String ad[])
     {
- 
-        app a=new app();
-       
-
+        app a=new app();  
     }
     
     public void paint (Graphics g)
