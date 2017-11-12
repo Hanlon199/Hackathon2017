@@ -12,7 +12,7 @@ public class app extends Canvas {
 	JFrame mainScreen;
 	
 	public app() {
-		windowHeight = 720;
+		windowHeight = 1000;
     	windowWidth = 1280;		
         bet = new MainPanel();
         mainScreen = new JFrame();

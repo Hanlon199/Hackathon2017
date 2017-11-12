@@ -14,41 +14,33 @@ public class MainPanel {
 	}
 	public void render(Graphics g) {
 
-			Font font = new Font("Amoebic", 1, 100);
-			Font font2 = new Font("Amoebic", 1, 60);
-			Font font3 = new Font("Amoebic", 1, 50);
-/**
-			g.setFont(font);
-			g.setColor(Color.orange);
-			g.drawString("Game Modes", 792, 66);
-
-			g.setFont(font);
-			g.setColor(Color.orange);
-			g.drawString("Player Known BattleLands", 20, 66);
-**/
-			g.setColor(Color.orange);
-			g.drawRect(30, 60, 1220, 120);
-			g.setFont(font);
-			g.setColor(Color.orange);
-			g.drawString("Report", 500, 155);
+			Font font = new Font("Amoebic", 1, 80);
+			Font font1 = new Font("Amoebic", 1, 70);
 
 			g.setColor(Color.orange);
-			g.drawRect(30, 240, 1220, 120);
+			g.drawRect(250, 60, 350, 350);
 			g.setFont(font);
 			g.setColor(Color.orange);
-			g.drawString("Important Numbers", 390, 330);
+			g.drawString("Report", 300, 250);
 
 			g.setColor(Color.orange);
-			g.drawRect(70, 420, 450, 110);
-			g.setFont(font2);
+			g.drawRect(650, 60, 350, 350);
+			g.setFont(font1);
 			g.setColor(Color.orange);
-			g.drawString("Quit", 200, 490);
+			g.drawString("Important", 670, 200);
+			g.drawString("Numbers", 680, 275);
 
 			g.setColor(Color.orange);
-			g.drawRect(760, 420, 450, 110);
-			g.setFont(font2);
+			g.drawRect(250, 460, 350, 350);
+			g.setFont(font);
 			g.setColor(Color.orange);
-			g.drawString("Location", 880, 490);
+			g.drawString("Quit", 340, 650);
+
+			g.setColor(Color.orange);
+			g.drawRect(650, 460, 350, 350);
+			g.setFont(font);
+			g.setColor(Color.orange);
+			g.drawString("Location", 665, 650);
 
 			
 	}
