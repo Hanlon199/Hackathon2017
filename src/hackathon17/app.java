@@ -10,6 +10,7 @@ public class app extends Canvas {
 	private static MainPanel bet;
 	private int windowHeight, windowWidth;
 	JFrame mainScreen;
+	public STATE gameState = STATE.MENU;
 	
 	public app() {
 		windowHeight = 1000;
@@ -19,6 +20,7 @@ public class app extends Canvas {
         mainScreen.getContentPane().add(this, BorderLayout.CENTER);
         mainScreen.setSize(new Dimension(windowWidth,windowHeight));
         mainScreen.setVisible(true);
+        
 	}
 	
 	public enum STATE {
