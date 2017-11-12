@@ -17,12 +17,12 @@ import javax.swing.JOptionPane;
 public class mouseListener extends MouseAdapter {
 
 	private MainPanel game;
-	//private Handler handler;
 	private String upgradeText;
 	private double width;
 	private double height;
 	private ImportantNumbers numbers;
 
+	
 	//this constructor not really necessary but I am leaving it just in case
 	public mouseListener(MainPanel game, ImportantNumbers numbers) {
 		this.game = game;
