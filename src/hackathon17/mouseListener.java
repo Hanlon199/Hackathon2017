@@ -3,27 +3,16 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
-import javax.swing.JOptionPane;
-
-
-/**
- * Handles all mouse input
- * 
- * @author Brandon Loehle 5/30/16
- *
- */
+ javax.swing.JOptionPane;
 
 public class mouseListener extends MouseAdapter {
 
 	private MainPanel game;
-	private String upgradeText;
 	private double width;
 	private double height;
 	private ImportantNumbers numbers;
 
 	
-	//this constructor not really necessary but I am leaving it just in case
 	public mouseListener(MainPanel game, ImportantNumbers numbers) {
 		this.game = game;
 		this.numbers = numbers;
