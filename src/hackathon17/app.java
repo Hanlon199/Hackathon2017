@@ -8,22 +8,31 @@ import java.applet.*;
 
 public class app extends Canvas {
 	private static MainPanel bet;
+	private int windowHeight, windowWidth;
+	JFrame mainScreen;
 	
-	public void paint (Graphics g)
+	public app() {
+		windowHeight = 720;
+    	windowWidth = 1280;		
+        bet = new MainPanel();
+        mainScreen = new JFrame();
+        mainScreen.getContentPane().add(this, BorderLayout.CENTER);
+        mainScreen.setSize(new Dimension(windowWidth,windowHeight));
+        mainScreen.setVisible(true);
+	}
+	
+    public static void main(String ad[])
+    {
+ 
+        app a=new app();
+       
+
+    }
+    
+    public void paint (Graphics g)
     {
         bet.render(g);
     }
 
-    public static void main(String ad[])
-    {
-
-        JFrame jp1 = new JFrame();
-        bet = new MainPanel();
-        app a=new app();
-        jp1.getContentPane().add(a, BorderLayout.CENTER);
-        jp1.setSize(new Dimension(500,500));
-        jp1.setVisible(true);
-
-    }
 
 }
