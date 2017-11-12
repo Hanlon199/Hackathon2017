@@ -21,11 +21,13 @@ public class mouseListener extends MouseAdapter {
 	private String upgradeText;
 	private double width;
 	private double height;
+	private ImportantNumbers numbers;
 
 	//this constructor not really necessary but I am leaving it just in case
-	public mouseListener(MainPanel game) {
-		this.game 			= game;
-		//this.handler 		= handler;
+	public mouseListener(MainPanel game, ImportantNumbers numbers) {
+		this.game = game;
+		this.numbers = numbers;
+		
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		width = (double) screenSize.getWidth();
 		height = (double) screenSize.getHeight();
